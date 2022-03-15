@@ -3371,8 +3371,8 @@ class PlayState extends MusicBeatState
 					WebmPlayer.SKIP_STEP_LIMIT = 90;
 					var str1:String = "WEBM SHIT"; 
 					webmHandler = new WebmHandler();
-					webmHandler.source(ourSource);
-					webmHandler.makePlayer();
+					//webmHandler.source(ourSource);
+					//webmHandler.makePlayer();
 					webmHandler.webm.name = str1;
 			
 					GlobalVideo.setWebm(webmHandler);
@@ -3392,9 +3392,9 @@ class PlayState extends MusicBeatState
 						GlobalVideo.get().play();
 					}
 					
-					var data = webmHandler.webm.bitmapData;
+					//var data = webmHandler.webm.bitmapData;
 			
-					videoSprite = new FlxSprite(-470,-30).loadGraphic(data);
+					//videoSprite = new FlxSprite(-470,-30).loadGraphic(data);
 			
 					videoSprite.setGraphicSize(Std.int(videoSprite.width * 1.2));
 			
@@ -3407,12 +3407,6 @@ class PlayState extends MusicBeatState
 					add(dad);
 			
 					trace('poggers');
-			
-					if (!songStarted)
-						webmHandler.pause();
-					else
-						webmHandler.resume();
-					#end
 				}
 
 	function noteMiss(direction:Int = 1, daNote:Note):Void
